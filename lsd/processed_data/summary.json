@@ -1,0 +1,78 @@
+{
+  "description": "Extracted datasets for prompt data reuse",
+  "output_directory": "C:\\Users\\52785\\Desktop\\Strategic-Deception\\deception-detection\\processed_data",
+  "datasets": {
+    "instruction_pairs_processed": {
+      "file": "instruction_pairs_processed.json",
+      "size_kb": 31.6,
+      "num_examples": 54,
+      "info": {
+        "name": "AILiarDataset (processed)",
+        "description": "Paired instruction data in dialogue format",
+        "format": "Each pair has honest and deceptive variants"
+      }
+    },
+    "instruction_pairs_raw": {
+      "file": "instruction_pairs_raw.json",
+      "size_kb": 26.7,
+      "num_examples": 27,
+      "info": {
+        "name": "AILiarDataset (raw)",
+        "source": "How to Catch an AI Liar paper (Appendix F)",
+        "url": "https://arxiv.org/abs/2309.15840",
+        "description": "Instruction pairs with honest vs deceptive instructions",
+        "fields": {
+          "normal_instruction": "Instruction for honest behavior",
+          "deceive_instruction": "Instruction for deceptive behavior",
+          "question": "User question",
+          "answer": "Expected honest answer",
+          "other_answer": "Deceptive/alternative answer",
+          "question_prefix": "Prefix for question (e.g., 'Human:')",
+          "answer_prefix": "Prefix for answer (e.g., 'AI:')"
+        }
+      }
+    },
+    "roleplaying_processed": {
+      "file": "roleplaying_processed.json",
+      "size_kb": 1203.8,
+      "num_examples": 742,
+      "info": {
+        "name": "RolePlayingDataset (processed)",
+        "description": "Paired roleplay data in dialogue format",
+        "format": "Each scenario has honest and deceptive variants"
+      }
+    },
+    "roleplaying_raw": {
+      "file": "roleplaying_raw.json",
+      "size_kb": 455.6,
+      "num_examples": 371,
+      "info": {
+        "name": "RolePlayingDataset (raw)",
+        "description": "Roleplay scenarios with honest and deceptive completions",
+        "fields": {
+          "scenario": "Context/roleplay setup",
+          "question": "User question within scenario",
+          "answer_prefix": "Start of assistant response",
+          "honest_completion": "Honest continuation",
+          "deceptive_completion": "Deceptive continuation"
+        }
+      }
+    },
+    "instruction_pairs_inference": {
+      "file": "instruction_pairs_inference.json",
+      "info": {
+        "name": "AILiarDataset (inference-ready)",
+        "description": "Formatted for LLaMA 3.3 70B inference - no assistant response",
+        "format": "Messages array with assistant_prefix for completion"
+      }
+    },
+    "roleplaying_inference": {
+      "file": "roleplaying_inference.json",
+      "info": {
+        "name": "RolePlayingDataset (inference-ready)",
+        "description": "Formatted for LLaMA 3.3 70B inference - no assistant response",
+        "format": "Messages array with assistant_prefix for completion"
+      }
+    }
+  }
+}

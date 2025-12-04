@@ -1,0 +1,30 @@
+# LSD (Lightweight Spectral Dynamics) Toolkit Requirements
+# Install with: pip install -r requirements.txt
+
+# Core numerical computing
+numpy>=1.21.0
+
+# Visualization
+matplotlib>=3.5.0
+
+# Deep learning (VAMPnet training)
+torch>=1.12.0
+
+# Scientific computing (TICA eigendecomposition)
+scipy>=1.9.0
+
+# Transformer models (LLaMA, etc.)
+transformers>=4.30.0
+
+# HuggingFace datasets (for Alpaca loading)
+datasets>=2.14.0
+
+# Optional: For faster tokenization
+# tokenizers>=0.13.0
+
+# Optional: For GPU acceleration with transformers
+# accelerate>=0.20.0
+
+# Optional: For 4-bit/8-bit quantization (reduces VRAM usage)
+# bitsandbytes>=0.39.0
+
